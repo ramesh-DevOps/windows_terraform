@@ -1,0 +1,30 @@
+---
+- hosts: localhost
+  gather_facts: true
+  become: false
+  tasks:
+  - shell:
+      cmd: terraform output public_ip
+      chdir: /var/lib/jenkins/workspace/windows-terraform/
+    register: terraform
+
+  - ansible.builtin.debug:
+      var: terraform.stdout
+
+  - name: Update Inventory
+    ansible.builtin.add_host:
+      name: "{{ item }}"
+      groups: windows
+      ansible_password: !oC(.WN&UDZ?YhY.Pset%CVa39Z?iKKC
+      ansible_connection: winrm
+      ansible_port: 5986
+      ansible_user: Administrator
+      ansible_winrm_server_cert_validation: ignore
+    loop: "{{ terraform.stdout }}"
+    
+- hosts: windows
+  roles:
+     - chocolatey
+     - dotnet
+     - iis
+     - mongodb

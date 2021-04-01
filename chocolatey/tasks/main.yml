@@ -1,0 +1,4 @@
+---
+# tasks file for chocolatey
+- name: Install Chocolatey on Windows16
+  win_chocolatey: name=procexp state=present

@@ -1,0 +1,10 @@
+---
+# tasks file for dotnet
+     - name: Installing the dotnetcore
+       win_chocolatey:
+           name: dotnetcore
+           state: present
+     - name: Installing python
+       win_chocolatey:
+           name: python
+           state: present
