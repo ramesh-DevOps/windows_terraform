@@ -51,7 +51,7 @@ resource "aws_security_group" "Instance_SG" {
 }
 locals {
   instance_count             = 1
-  ami                        = "ami-06839b0a97b860c21"
+  ami                        = "ami-0543353e3c6567e2c"
   key_name                   = "windows-key"
   type                       = "t2.micro"
   subnets                    = "subnet-2708aa5f"
