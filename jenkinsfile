@@ -6,7 +6,7 @@ pipeline {
     stages {
         stage('git clone') {
             steps {
-              git branch: 'main', url: "https://github.com/ramesh-DevOps/windows_ec2.git" 
+              git branch: 'main', url: "https://github.com/ramesh-DevOps/windows_terraform.git" 
               sh "ls -ll"
             }
         }
