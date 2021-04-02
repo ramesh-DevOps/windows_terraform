@@ -2,6 +2,8 @@
 - hosts: localhost
   gather_facts: true
   become: false
+  vars:
+    my_password: "{{ password }}"
   tasks:
   - shell:
       cmd: terraform output public_ip
@@ -15,7 +17,7 @@
     ansible.builtin.add_host:
       name: "{{ item }}"
       groups: windows
-      ansible_password: "{{ password }}"
+      ansible_password: "{{ my_password }}"
       ansible_connection: winrm
       ansible_port: 5986
       ansible_user: Administrator
