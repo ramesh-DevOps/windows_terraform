@@ -5,7 +5,7 @@
   tasks:
   - shell:
       cmd: terraform output public_ip
-      chdir: /var/lib/jenkins/workspace/windows-terraform/
+      chdir: /var/lib/jenkins/workspace/windows_terraform/
     register: terraform
 
   - ansible.builtin.debug:
