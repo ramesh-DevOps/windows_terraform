@@ -36,6 +36,8 @@
       direction: In
       protocol: Tcp
       force: true
+      remoteip: any
+      remoteport: any
     tags: firewall
 
   - name: create deploy staging path
