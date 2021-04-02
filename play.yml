@@ -2,8 +2,6 @@
 - hosts: localhost
   gather_facts: true
   become: false
-  vars_files:
-    - vault-pass.yml
   tasks:
   - shell:
       cmd: terraform output public_ip
