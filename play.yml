@@ -30,5 +30,5 @@
      - dotnet
      - iis
      - mongodb
-     - angular
      - nodejs
+     - angular
