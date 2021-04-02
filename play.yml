@@ -15,7 +15,7 @@
     ansible.builtin.add_host:
       name: "{{ item }}"
       groups: windows
-      ansible_password: !oC(.WN&UDZ?YhY.Pset%CVa39Z?iKKC
+      ansible_password: EvAlyxEA@H!6BjmSc$y.M*am*!bA.tRV
       ansible_connection: winrm
       ansible_port: 5986
       ansible_user: Administrator
