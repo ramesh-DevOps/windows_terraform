@@ -1,4 +1,0 @@
----
-# vars file for nodejs
-NODEJS_VERSION: "8"
-ansible_os_family: "Windows"
