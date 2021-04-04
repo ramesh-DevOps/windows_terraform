@@ -2,6 +2,6 @@
 # tasks file for angular
 - name: Install Angular
   npm:
-    name: '@angular/core'
+    name: '@angular/cli'
     global: yes
     state: present
