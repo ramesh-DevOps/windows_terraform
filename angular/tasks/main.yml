@@ -1,7 +1,0 @@
----
-# tasks file for angular
-- name: Install Angular
-  npm:
-    name: "@angular/cli@8.0.0"
-    global: yes
-    state: present
