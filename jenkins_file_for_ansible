@@ -1,0 +1,17 @@
+pipeline {
+    agent any
+    parameters{
+        string(name: 'password', defaultValue: '', description: 'windows login', )
+    }
+    stages {
+        stage('run the ansible playbook') {
+            steps {
+              script{
+               def  password = params.password
+                println password
+             sh "ansible-playbook /var/lib/jenkins/workspace/windows_terraform/play.yml -e 'password=${password}' -vvv"
+              }
+            }
+        }
+    }
+}
