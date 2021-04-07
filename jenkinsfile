@@ -1,7 +1,7 @@
 pipeline {
     agent any    
     parameters{
-        string(name: 'AWS_EC2_TYPE', defaultValue: 't2.micro', description: 'The target environment', )
+        string(name: 'AWS_EC2_TYPE', description: 'The target environment', )
     }
     stages {
         stage('git clone') {
